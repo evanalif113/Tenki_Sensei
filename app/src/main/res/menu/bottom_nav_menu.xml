@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/barometer"
+        android:icon="@drawable/overcast_day_drizzle"
         android:title="@string/Learning" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/overcast_rain"
+        android:icon="@drawable/raindrop"
         android:title="@string/Calculator" />
 
     <item
