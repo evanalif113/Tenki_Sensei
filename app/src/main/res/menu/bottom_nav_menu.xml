@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/barometer"
+        android:title="@string/Learning" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/overcast_rain"
+        android:title="@string/Calculator" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/code_yellow"
+        android:title="@string/Database" />
+</menu>
