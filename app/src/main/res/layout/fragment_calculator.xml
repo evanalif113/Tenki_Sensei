@@ -15,6 +15,7 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp" />
+
     <!-- TextView for title -->
     <TextView
         android:id="@+id/titleText"
@@ -24,14 +25,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
-        android:text="Kalkulator "
+        android:text="Kalkulator Suhu"
         android:textColor="@color/hitam"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- EditText for second input -->
+    <!-- EditText for Temperature -->
     <EditText
-        android:id="@+id/secondInput"
+        android:id="@+id/dryBulbInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleText"
@@ -39,21 +40,22 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:hint="Inputkan Suhu"
+        android:hint="Inputkan Suhu Bola Kering"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:padding="10dp" />
 
-    <!-- EditText for first input -->
+    <!-- EditText for Wet-Bulb Temperature -->
     <EditText
-        android:id="@+id/firstInput"
+        android:id="@+id/wetBulbInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/secondInput"
+        android:layout_below="@id/dryBulbInput"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:hint="Inputkan Kelembapan"
+        android:hint="Inputkan Suhu Bola Basah"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:padding="10dp" />
@@ -63,7 +65,7 @@
         android:id="@+id/calculateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/firstInput"
+        android:layout_below="@id/wetBulbInput"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
@@ -73,18 +75,33 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <!-- TextView for result -->
+    <!-- TextView for humidity result -->
     <TextView
-        android:id="@+id/resultText"
+        android:id="@+id/resultText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/calculateButton"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:text="Kelembapan: "
+        android:textColor="@color/hitam"
+        android:textSize="20sp" />
+
+    <!-- TextView for result -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultText3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         android:text="Suhu dirasakan: "
         android:textColor="@color/hitam"
         android:textSize="20sp" />
+
+    <!-- TextView for dew point result -->
     <TextView
         android:id="@+id/resultText2"
         android:layout_width="match_parent"
@@ -96,4 +113,5 @@
         android:text="Titik Embun: "
         android:textColor="@color/hitam"
         android:textSize="20sp" />
+
 </RelativeLayout>

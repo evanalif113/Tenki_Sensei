@@ -28,35 +28,41 @@ public class CalculatorFragment extends Fragment {
         View root = binding.getRoot();
 
         // Get references to UI elements
-        final EditText editTextTemperature = binding.secondInput;
-        final EditText editTextHumidity = binding.firstInput;
+        final EditText editTextDryBulb = binding.dryBulbInput;
+        final EditText editTextWetBulb = binding.wetBulbInput;
         final Button buttonCalculate = binding.calculateButton;
         final TextView textViewResult = binding.resultText;
         final TextView textViewDewPoint = binding.resultText2;
+        final TextView textViewHumidity = binding.resultText3;
 
         // Set OnClickListener for the calculate button
         buttonCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tempStr = editTextTemperature.getText().toString();
-                String humidityStr = editTextHumidity.getText().toString();
+                String dryBulbStr = editTextDryBulb.getText().toString();
+                String wetBulbStr = editTextWetBulb.getText().toString();
 
-                if (!tempStr.isEmpty() && !humidityStr.isEmpty()) {
-                    double temperature = Double.parseDouble(tempStr);
-                    double humidity = Double.parseDouble(humidityStr);
+                if (!dryBulbStr.isEmpty() && !wetBulbStr.isEmpty()) {
+                    double dryBulb = Double.parseDouble(dryBulbStr);
+                    double wetBulb = Double.parseDouble(wetBulbStr);
 
                     // Calculate dew point
-                    double dewPoint = calculateDewPoint(temperature, humidity);
+                    double dewPoint = calculateDewPoint(dryBulb, wetBulb);
 
                     // Calculate feels-like temperature
-                    double feelsLike = calculateFeelsLike(temperature, humidity);
+                    double feelsLike = calculateFeelsLike(dryBulb, wetBulb);
+
+                    // Calculate humidity
+                    double humidity = calculateHumidity(dryBulb, wetBulb);
 
                     // Display the results
                     textViewResult.setText("Suhu dirasakan: " + String.format("%.2f", feelsLike) + "°C");
                     textViewDewPoint.setText("Titik Embun: " + String.format("%.2f", dewPoint) + "°C");
+                    textViewHumidity.setText("Kelembapan: " + String.format("%.2f", humidity) + "%");
                 } else {
-                    textViewResult.setText("Harap masukkan nilai suhu dan kelembapan.");
+                    textViewResult.setText("Harap masukkan nilai suhu bola kering dan suhu bola basah.");
                     textViewDewPoint.setText("");
+                    textViewHumidity.setText("");
                 }
             }
         });
@@ -64,21 +70,35 @@ public class CalculatorFragment extends Fragment {
         return root;
     }
 
-    private double calculateDewPoint(double temperature, double humidity) {
+    private double calculateDewPoint(double dryBulb, double wetBulb) {
+        // Rumus approximasi untuk menghitung titik embun
         double a = 17.27;
         double b = 237.7;
-        double alpha = ((a * temperature) / (b + temperature)) + Math.log(humidity / 100);
+        double alpha = ((a * wetBulb) / (b + wetBulb)) + Math.log(relativeHumidity(dryBulb, wetBulb) / 100.0);
         return (b * alpha) / (a - alpha);
     }
 
-    private double calculateFeelsLike(double temperature, double humidity) {
-        // Simplified formula for calculating the heat index ("feels-like" temperature)
-        return 0.8*temperature + ((humidity*temperature)/500);
+    private double calculateHumidity(double dryBulb, double wetBulb) {
+        // Rumus approximasi untuk menghitung kelembapan relatif
+        double dryBulbTempK = dryBulb + 273.15;
+        double wetBulbTempK = wetBulb + 273.15;
+        double e = 6.11 * Math.exp((17.67 * dryBulb) / (dryBulb + 243.5));
+        double e1 = 6.11 * Math.exp((17.67 * wetBulb) / (wetBulb + 243.5));
+        double rh = (e1 - (0.00066 * 1013 * (dryBulb - wetBulb))) / e * 100;
+        return rh;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    private double relativeHumidity(double dryBulb, double wetBulb) {
+        // Rumus approximasi untuk menghitung kelembapan relatif dari suhu bola kering dan bola basah
+        double dryBulbTempK = dryBulb + 273.15;
+        double wetBulbTempK = wetBulb + 273.15;
+        double e = 6.11 * Math.exp((17.67 * dryBulb) / (dryBulb + 243.5));
+        double e1 = 6.11 * Math.exp((17.67 * wetBulb) / (wetBulb + 243.5));
+        return ((e1 - (0.00066 * 1013 * (dryBulb - wetBulb))) / e) * 100;
+    }
+    private double calculateFeelsLike(double dryBulb, double wetBulb) {
+        // Rumus approximasi untuk menghitung suhu dirasakan
+        // Perhatikan ini adalah rumus sederhana, untuk aplikasi riil gunakan rumus yang lebih akurat
+        return 0.8*dryBulb+((calculateHumidity(dryBulb, wetBulb)*dryBulb)/500);
     }
 }
