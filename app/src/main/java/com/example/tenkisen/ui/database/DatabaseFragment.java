@@ -24,8 +24,8 @@ public class DatabaseFragment extends Fragment {
         binding = FragmentDatabaseBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.database;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //
+
         return root;
     }
 

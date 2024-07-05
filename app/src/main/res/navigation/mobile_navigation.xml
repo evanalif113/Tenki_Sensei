@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_learning">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_learning"
         android:name="com.example.tenkisen.ui.learning.LearningFragment"
         android:label="@string/Learning"
         tools:layout="@layout/fragment_learning" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_calculator"
         android:name="com.example.tenkisen.ui.calculator.CalculatorFragment"
         android:label="@string/Calculator"
         tools:layout="@layout/fragment_calculator" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_database"
         android:name="com.example.tenkisen.ui.database.DatabaseFragment"
         android:label="@string/Database"
         tools:layout="@layout/fragment_database" />

@@ -19,21 +19,30 @@ public class CalculatorFragment extends Fragment {
     private FragmentCalculatorBinding binding;
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull
+                                 LayoutInflater inflater,
+                             ViewGroup container,
+                             Bundle savedInstanceState) {
         CalculatorViewModel calculatorViewModel =
                 new ViewModelProvider(this).get(CalculatorViewModel.class);
 
         binding = FragmentCalculatorBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // Get references to UI elements
+        // Get references to UI elements in Kalkulator Suhu
         final EditText editTextDryBulb = binding.dryBulbInput;
         final EditText editTextWetBulb = binding.wetBulbInput;
         final Button buttonCalculate = binding.calculateButton;
-        final TextView textViewResult = binding.resultText;
-        final TextView textViewDewPoint = binding.resultText2;
-        final TextView textViewHumidity = binding.resultText3;
+        final TextView textViewHumidity = binding.HumidityResult;
+        final TextView textViewFeelslike = binding.FeelsResult;
+        final TextView textViewDewpoint = binding.DewpointResult;
+
+        // Get references to UI elements in Kalkulator Konversi Suhu
+//        final EditText editTextCelcius = binding.suhuCelcius;
+//        final EditText editTextFahrenheit = binding.suhuFahrenheit;
+//        final EditText editTextKelvin = binding.suhuKelvin;
+//        final EditText editTextReamur = binding.suhuReamur;
+
 
         // Set OnClickListener for the calculate button
         buttonCalculate.setOnClickListener(new View.OnClickListener() {
@@ -56,12 +65,12 @@ public class CalculatorFragment extends Fragment {
                     double humidity = calculateHumidity(dryBulb, wetBulb);
 
                     // Display the results
-                    textViewResult.setText("Suhu dirasakan: " + String.format("%.2f", feelsLike) + "°C");
-                    textViewDewPoint.setText("Titik Embun: " + String.format("%.2f", dewPoint) + "°C");
+                    textViewFeelslike.setText("Suhu dirasakan: " + String.format("%.2f", feelsLike) + "°C");
+                    textViewDewpoint.setText("Titik Embun: " + String.format("%.2f", dewPoint) + "°C");
                     textViewHumidity.setText("Kelembapan: " + String.format("%.2f", humidity) + "%");
                 } else {
-                    textViewResult.setText("Harap masukkan nilai suhu bola kering dan suhu bola basah.");
-                    textViewDewPoint.setText("");
+                    textViewFeelslike.setText("Harap masukkan nilai suhu bola kering dan suhu bola basah.");
+                    textViewDewpoint.setText("");
                     textViewHumidity.setText("");
                 }
             }

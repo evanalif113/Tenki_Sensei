@@ -2,17 +2,17 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_learning"
         android:icon="@drawable/overcast_day_drizzle"
         android:title="@string/Learning" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_calculator"
         android:icon="@drawable/raindrop"
         android:title="@string/Calculator" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_database"
         android:icon="@drawable/code_yellow"
         android:title="@string/Database" />
 </menu>

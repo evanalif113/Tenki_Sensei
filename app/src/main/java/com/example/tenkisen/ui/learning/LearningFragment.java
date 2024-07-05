@@ -24,8 +24,6 @@ public class LearningFragment extends Fragment {
         binding = FragmentLearningBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.learning;
-        learningViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
