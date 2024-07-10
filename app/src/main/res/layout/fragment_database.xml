@@ -6,98 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".ui.database.DatabaseFragment">
 
-    <!-- TextView for title -->
-    <TextView
-        android:id="@+id/titleText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Jurnal Cuaca"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-    <!-- EditText to enter tanggal -->
-    <EditText
-        android:id="@+id/idEdtTanggal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Tanggal"
-        app:layout_constraintTop_toBottomOf="@id/titleText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <!-- EditText to enter suhu -->
-    <EditText
-        android:id="@+id/idEdtSuhu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Suhu"
-        android:minHeight="48dp"
-        app:layout_constraintTop_toBottomOf="@id/idEdtTanggal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- TextView for title -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Jurnal Cuaca"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- EditText to enter kelembapan -->
-    <EditText
-        android:id="@+id/idEdtKelembapan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Kelembapan"
-        android:minHeight="48dp"
-        app:layout_constraintTop_toBottomOf="@id/idEdtSuhu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- DatePicker for tanggal -->
+            <DatePicker
+                android:id="@+id/idDatePickerTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/titleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" />
 
-    <!-- TextView for Kondisi Cuaca -->
-    <TextView
-        android:id="@+id/labelKondisiCuaca"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="Kondisi Cuaca"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/idEdtKelembapan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- EditText to enter suhu -->
+            <EditText
+                android:id="@+id/idEdtSuhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Suhu"
+                android:minHeight="48dp"
+                app:layout_constraintTop_toBottomOf="@id/idDatePickerTanggal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- RadioGroup for Keadaan Cuaca -->
-    <RadioGroup
-        android:id="@+id/radioGroupKeadaanCuaca"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@id/labelKondisiCuaca"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+            <!-- EditText to enter kelembapan -->
+            <EditText
+                android:id="@+id/idEdtKelembapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Kelembapan"
+                android:minHeight="48dp"
+                app:layout_constraintTop_toBottomOf="@id/idEdtSuhu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioHujan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hujan" />
+            <!-- TextView for Kondisi Cuaca -->
+            <TextView
+                android:id="@+id/labelKondisiCuaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Kondisi Cuaca"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/idEdtKelembapan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioBerangin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Berangin" />
+            <!-- EditText to enter kondisi cuaca -->
+            <EditText
+                android:id="@+id/idEdtKeadaanCuaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Keadaan Cuaca"
+                android:minHeight="48dp"
+                app:layout_constraintTop_toBottomOf="@id/labelKondisiCuaca"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Normal" />
-    </RadioGroup>
+            <!-- Button for adding data -->
+            <Button
+                android:id="@+id/tambahData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Tambah Data"
+                android:textAllCaps="false"
+                android:background="@color/biru"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/idEdtKeadaanCuaca"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
