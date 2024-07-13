@@ -82,13 +82,15 @@
             <!-- Button for adding data -->
             <Button
                 android:id="@+id/tambahData"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:padding="16dp"
                 android:text="Tambah Data"
                 android:textAllCaps="false"
                 android:background="@color/biru"
                 android:textColor="@color/white"
+                android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@id/idEdtKeadaanCuaca"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

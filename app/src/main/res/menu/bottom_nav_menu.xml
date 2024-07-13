@@ -13,6 +13,6 @@
 
     <item
         android:id="@+id/navigation_database"
-        android:icon="@drawable/raindrop_measure"
+        android:icon="@drawable/partly_cloudy_day_drizzle"
         android:title="@string/Database" />
 </menu>
