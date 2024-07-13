@@ -18,10 +18,11 @@ import com.example.tenkisen.databinding.FragmentDatabaseBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class DatabaseFragment extends Fragment {
 
@@ -150,12 +151,15 @@ public class DatabaseFragment extends Fragment {
     private void addDataToFirestore(String dataTanggal, String dataSuhu, String dataKelembapan, String dataCuaca) {
         CollectionReference dbCuaca = db.collection("Cuaca");
 
+        // Create custom ID using date and time to ensure uniqueness
+        String customId = createCustomId(dataTanggal);
+
         Data data = new Data(dataTanggal, dataSuhu, dataKelembapan, dataCuaca);
 
-        dbCuaca.add(data)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        dbCuaca.document(customId).set(data)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onSuccess(DocumentReference documentReference) {
+                    public void onSuccess(Void aVoid) {
                         if (getContext() != null) {
                             Toast.makeText(getContext(), "Data anda telah ditambahkan dalam Database", Toast.LENGTH_SHORT).show();
                         }
@@ -169,5 +173,15 @@ public class DatabaseFragment extends Fragment {
                         }
                     }
                 });
+    }
+
+    private String createCustomId(String dataTanggal) {
+        // Convert date to a format suitable for a unique ID
+        String pattern = "yyyyMMddHHmmss";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern, Locale.getDefault());
+        String dateId = simpleDateFormat.format(Calendar.getInstance().getTime());
+
+        // Combine with other fields if needed
+        return dateId + "_" + dataTanggal.replace("/", "");
     }
 }
