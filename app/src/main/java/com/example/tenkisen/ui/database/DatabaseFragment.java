@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.tenkisen.databinding.FragmentDatabaseBinding;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
 
@@ -30,11 +32,21 @@ public class DatabaseFragment extends Fragment {
         binding = FragmentDatabaseBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        // creating a variable
+        // for firebasefirestore.
+        FirebaseFirestore db;
+        db = FirebaseFirestore.getInstance();
+
         // EditText for date picker
-        EditText edtTanggal = binding.idEdtTanggal;
+        final EditText dataTanggal = binding.idEdtTanggal;
+        final EditText dataSuhu = binding.idEdtSuhu;
+        final EditText dataKelembapan = binding.idEdtKelembapan;
+        final EditText keadaanCuaca = binding.idEdtKeadaanCuaca;
+        final Button TambahData = binding.tambahData;
+        final Button LihatData = binding.lihatData;
 
         // Set click listener to show DatePickerDialog
-        edtTanggal.setOnClickListener(v -> {
+        dataTanggal.setOnClickListener(v -> {
             final Calendar calendar = Calendar.getInstance();
             int year = calendar.get(Calendar.YEAR);
             int month = calendar.get(Calendar.MONTH);
@@ -44,18 +56,32 @@ public class DatabaseFragment extends Fragment {
                     getContext(),
                     (view, year1, monthOfYear, dayOfMonth) -> {
                         String date = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year1;
-                        edtTanggal.setText(date);
+                        dataTanggal.setText(date);
                     },
                     year, month, day);
             datePickerDialog.show();
         });
 
-        return root;
-    }
+        // Tombol tambah data
+        TambahData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String Tanggal = dataTanggal.getText().toString();
+                String Suhu = dataSuhu.getText().toString();
+                String Kelembapan = dataKelembapan.getText().toString();
+                String Cuaca = keadaanCuaca.getText().toString();
+            }
+        });
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+        // Tombol lihat data
+        LihatData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        return root;
     }
 }

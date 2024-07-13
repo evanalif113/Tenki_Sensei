@@ -36,13 +36,6 @@ public class CalculatorFragment extends Fragment {
         final TextView textViewFeelslike = binding.FeelsResult;
         final TextView textViewDewpoint = binding.DewpointResult;
 
-        // Get references to UI elements in Kalkulator Konversi Suhu
-//        final EditText editTextCelcius = binding.suhuCelcius;
-//        final EditText editTextFahrenheit = binding.suhuFahrenheit;
-//        final EditText editTextKelvin = binding.suhuKelvin;
-//        final EditText editTextReamur = binding.suhuReamur;
-
-
         // Set OnClickListener for the calculate button
         buttonCalculate.setOnClickListener(new View.OnClickListener() {
             @Override

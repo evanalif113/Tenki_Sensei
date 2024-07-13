@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "197660344136",
+    "project_id": "tenki-sensei",
+    "storage_bucket": "tenki-sensei.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197660344136:android:c6cd5c43991213fd5bbd7d",
+        "android_client_info": {
+          "package_name": "com.example.tenkisen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw36EfXlhfbHdIz6t1zjEDfwCa4t98xrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

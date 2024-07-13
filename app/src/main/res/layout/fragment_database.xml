@@ -95,6 +95,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
+            <Button
+                android:id="@+id/lihatData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="16dp"
+                android:text="lihat Data"
+                android:textAllCaps="false"
+                android:background="@color/biru"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/tambahData"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
