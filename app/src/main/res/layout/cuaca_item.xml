@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:padding="4dp">
 
-        <!--Textview for displaying our Course Name-->
+        <!--TextView for displaying the Date-->
         <TextView
             android:id="@+id/idTVDataTanggal"
             android:layout_width="match_parent"
@@ -27,31 +27,74 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!--Textview for displaying our Course Duration-->
-        <TextView
-            android:id="@+id/idTVDataSuhu"
+        <!-- LinearLayout for Suhu with label -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="2dp"
-            android:text="Suhu"
-            android:textColor="@color/black" />
+            android:orientation="horizontal">
 
-        <!--Textview for displaying our Course Description-->
-        <TextView
-            android:id="@+id/idTVDataKelembapan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="2dp"
-            android:text="Kelembapan"
-            android:textColor="@color/black" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Suhu:"
+                android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/idTVDataCuaca"
+            <TextView
+                android:id="@+id/idTVDataSuhu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="2dp"
+                android:text="Suhu"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- LinearLayout for Kelembapan with label -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="2dp"
-            android:text="Cuaca"
-            android:textColor="@color/black" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kelembapan:"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/idTVDataKelembapan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="2dp"
+                android:text="Kelembapan"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- LinearLayout for Cuaca with label -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cuaca:"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/idTVDataCuaca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="2dp"
+                android:text="Cuaca"
+                android:textColor="@color/black" />
+        </LinearLayout>
 
     </LinearLayout>
 

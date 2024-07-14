@@ -2,6 +2,7 @@ package com.example.tenkisen.ui.database;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -101,11 +102,12 @@ public class DatabaseFragment extends Fragment {
             }
         });
 
-        // View data button click listener (to be implemented)
+        // View data button click listener
         lihatData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Implement view data functionality here
+                Intent intent = new Intent(getActivity(), CuacaDetails.class);
+                startActivity(intent);
             }
         });
 
