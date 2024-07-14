@@ -85,30 +85,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:background="@color/biru"
                 android:padding="16dp"
                 android:text="TAMBAH DATA"
                 android:textAllCaps="false"
-                android:background="@color/biru"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                app:layout_constraintTop_toBottomOf="@id/idEdtKeadaanCuaca"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/idEdtKeadaanCuaca" />
 
             <Button
                 android:id="@+id/lihatData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:background="@color/biru"
                 android:padding="16dp"
                 android:text="LIHAT DATA"
                 android:textAllCaps="false"
-                android:background="@color/biru"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                app:layout_constraintTop_toBottomOf="@id/tambahData"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/tambahData" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
