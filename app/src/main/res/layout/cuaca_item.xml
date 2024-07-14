@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:padding="4dp">
 
-        <!--TextView for displaying the Date-->
+        <!-- TextView for displaying the Date -->
         <TextView
             android:id="@+id/idTVDataTanggal"
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!-- LinearLayout for Suhu with label -->
+        <!-- LinearLayout for Suhu with label and unit -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,9 +48,16 @@
                 android:padding="2dp"
                 android:text="Suhu"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="°C"
+                android:textColor="@color/black" />
         </LinearLayout>
 
-        <!-- LinearLayout for Kelembapan with label -->
+        <!-- LinearLayout for Kelembapan with label and unit -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,6 +77,13 @@
                 android:layout_weight="2"
                 android:padding="2dp"
                 android:text="Kelembapan"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="RH%"
                 android:textColor="@color/black" />
         </LinearLayout>
 
