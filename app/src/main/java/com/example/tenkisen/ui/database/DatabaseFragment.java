@@ -1,6 +1,7 @@
 package com.example.tenkisen.ui.database;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -47,7 +48,7 @@ public class DatabaseFragment extends Fragment {
         final Button tambahData = binding.tambahData;
         final Button lihatData = binding.lihatData;
 
-        // Set click listener to show DatePickerDialog
+        // Set click listener to show custom DateTimePickerDialog
         dataTanggal.setOnClickListener(v -> {
             final Calendar calendar = Calendar.getInstance();
             int year = calendar.get(Calendar.YEAR);
@@ -57,8 +58,21 @@ public class DatabaseFragment extends Fragment {
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     getContext(),
                     (view, year1, monthOfYear, dayOfMonth) -> {
-                        String date = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year1;
-                        dataTanggal.setText(date);
+                        final int selectedYear = year1;
+                        final int selectedMonth = monthOfYear;
+                        final int selectedDay = dayOfMonth;
+
+                        TimePickerDialog timePickerDialog = new TimePickerDialog(
+                                getContext(),
+                                (view1, hourOfDay, minute) -> {
+                                    final int selectedHour = hourOfDay;
+                                    final int selectedMinute = minute;
+
+                                    String dateTime = selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear + " " + selectedHour + ":" + selectedMinute;
+                                    dataTanggal.setText(dateTime);
+                                },
+                                calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
+                        timePickerDialog.show();
                     },
                     year, month, day);
             datePickerDialog.show();
@@ -177,11 +191,11 @@ public class DatabaseFragment extends Fragment {
 
     private String createCustomId(String dataTanggal) {
         // Convert date to a format suitable for a unique ID
-        String pattern = "yyyyMMddHHmmss";
+        String pattern = "yyyy-MM-dd HH:mm:ss";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern, Locale.getDefault());
         String dateId = simpleDateFormat.format(Calendar.getInstance().getTime());
 
         // Combine with other fields if needed
-        return dateId + "_" + dataTanggal.replace("/", "");
+        return dateId;
     }
 }
