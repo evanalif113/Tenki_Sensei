@@ -26,7 +26,11 @@ public class Cuaca implements Serializable {
     private String id;
 
     // variables for storing our data.
-    private String dataTanggal, dataSuhu, dataKelembapan, dataCuaca;
+    private String
+            dataTanggal,
+            dataSuhu,
+            dataKelembapan,
+            dataCuaca;
 
     public Cuaca() {
         // empty constructor required for Firebase.
