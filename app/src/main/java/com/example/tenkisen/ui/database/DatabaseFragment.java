@@ -172,7 +172,8 @@ public class DatabaseFragment extends Fragment {
 
         Data data = new Data(dataTanggal, dataSuhu, dataKelembapan, dataCuaca);
 
-        dbCuaca.document(customId).set(data)
+        dbCuaca.document(customId)
+                .set(data)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

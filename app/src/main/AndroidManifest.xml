@@ -32,6 +32,14 @@
             android:exported="false"
             android:label="Awan"/>
         <activity
+            android:name=".ui.database.UpdateCuaca"
+            android:exported="true"
+            android:label="Jurnal Cuaca" />
+        <activity
+            android:name=".ui.database.CuacaDetails"
+            android:exported="true"
+            android:label="Jurnal Cuaca" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name" >
@@ -51,16 +59,7 @@
                 <category android:name="android.intent.category.ALTERNATIVE" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.database.CuacaDetails"
-            android:exported="true"
-            android:label="Jurnal Cuaca" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.ALTERNATIVE" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
