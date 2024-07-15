@@ -3,16 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_learning"
-        android:icon="@drawable/overcast_day_drizzle"
+        android:icon="@drawable/overcast_day_rain"
         android:title="@string/Learning" />
 
     <item
         android:id="@+id/navigation_calculator"
-        android:icon="@drawable/raindrop"
+        android:icon="@drawable/thermometer_raindrop"
         android:title="@string/Calculator" />
 
     <item
         android:id="@+id/navigation_database"
-        android:icon="@drawable/partly_cloudy_day_drizzle"
+        android:icon="@drawable/barometer"
         android:title="@string/Database" />
 </menu>
