@@ -34,10 +34,10 @@
                     android:padding="8dp">
 
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="200dp"
-                        android:src="@drawable/screenshot__98_"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/awan" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Awan adalah massa yang dapat dilihat dari tetesan air atau kristal beku yang menggantung di atmosfer yang berada di atas permukaan bumi atau permukaan planet lain.[1] Awan juga merupakan massa terlihat yang tertarik oleh gravitasi, seperti massa materi dalam ruang yang disebut awan antarbintang dan nebula. Awan dipelajari dalam ilmu awan atau fisika awan, suatu cabang meteorologi."
+                        android:text="Awan adalah massa yang dapat dilihat dari tetesan air atau kristal beku yang menggantung di atmosfer yang berada di atas permukaan bumi atau permukaan planet lain. Awan juga merupakan massa terlihat yang tertarik oleh gravitasi,seperti massa materi dalam ruang yang disebut awan antarbintang dan nebula. Awan dipelajari dalam ilmu awan atau fisika awan, suatu cabang meteorologi.Para ilmuwan sudah pernah menjelaskan tentang keberadaan awan ini ada sejak tahun 1770-an. Adapun pengertian awan menurut para ilmuwan adalah sebagai berikut. Keberadaan awan di atmosfer sangat berpengaruh pada cuaca dan iklim di Bumi. Contohnya saja, jika di daerahmu terdapat awan yang berwarna hitam dan pekat, maka kemungkinan besar akan turun hujan di daerah tersebut. "
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
