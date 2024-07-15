@@ -6,111 +6,101 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.calculator.CalculatorFragment"
-    >
+    android:background="@color/lembut">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
-            <!-- TextView for title -->
-            <TextView
-                android:id="@+id/titleText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:text="Kalkulator Suhu"
-                android:textColor="@color/hitam"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:padding="16dp">
 
-            <!-- EditText for Temperature -->
-            <EditText
-                android:id="@+id/dryBulbInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:hint="Inputkan Suhu Bola Kering"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp" />
+                <!-- TextView for title -->
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Kalkulator Suhu"
+                    android:textColor="@color/hitam"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-            <!-- EditText for Wet-Bulb Temperature -->
-            <EditText
-                android:id="@+id/wetBulbInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:hint="Inputkan Suhu Bola Basah"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp" />
+                <!-- EditText for Temperature -->
+                <EditText
+                    android:id="@+id/dryBulbInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Inputkan Suhu Bola Kering"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:padding="10dp" />
 
-            <!-- Button for calculation -->
-            <Button
-                android:id="@+id/calculateButton"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:backgroundTint="@color/biru"
-                android:text="Hitung"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <!-- EditText for Wet-Bulb Temperature -->
+                <EditText
+                    android:id="@+id/wetBulbInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Inputkan Suhu Bola Basah"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:padding="10dp" />
 
-            <!-- TextView for humidity result -->
-            <TextView
-                android:id="@+id/HumidityResult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Kelembapan: "
-                android:textColor="@color/hitam"
-                android:textSize="20sp" />
+                <!-- Button for calculation -->
+                <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/biru"
+                    android:text="Hitung"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <!-- TextView for feels like result -->
-            <TextView
-                android:id="@+id/FeelsResult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Suhu dirasakan: "
-                android:textColor="@color/hitam"
-                android:textSize="20sp" />
+                <!-- TextView for humidity result -->
+                <TextView
+                    android:id="@+id/HumidityResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Kelembapan: "
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp" />
 
-            <!-- TextView for dew point result -->
-            <TextView
-                android:id="@+id/DewpointResult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Titik Embun: "
-                android:textColor="@color/hitam"
-                android:textSize="20sp" />
+                <!-- TextView for feels like result -->
+                <TextView
+                    android:id="@+id/FeelsResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Suhu dirasakan: "
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp" />
 
-        </LinearLayout>
+                <!-- TextView for dew point result -->
+                <TextView
+                    android:id="@+id/DewpointResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Titik Embun: "
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </ScrollView>
 </RelativeLayout>
