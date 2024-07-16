@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.learning.LearnAngin">
+    tools:context=".ui.learning.LearnAngin"
+    android:background="@color/lembut">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/lembut">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+      <!-- CardView -->
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="200dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/angin" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="Angin"
+              android:textColor="@color/black"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp"
+              android:text="Angin adalah pergerakan udara dari daerah yang bertekanan tinggi ke daerah yang bertekanan rendah. Pembentukan arah angin terjadi karena perbedaan tekanan udara di dua tempat berbeda. Aliran angin berasal dari tempat yang memiliki tekanan udara tinggi menuju ke tempat yang bertekanan udara rendah. Terjadinya angin dipengaruhi oleh rotasi bumi bersamaan dengan proses pemanasan suatu wilayah oleh matahari.[3] Angin diberi nama berdasarkan asal datangnya, seperti angin darat, angin lembah, dan angin gunung. Kekuatan angin dimanfaatkan dalam berbagai kegiatan di kehidupan manusia."
+              android:textColor="@color/black"
+              android:textSize="14sp" />
+
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+  </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
