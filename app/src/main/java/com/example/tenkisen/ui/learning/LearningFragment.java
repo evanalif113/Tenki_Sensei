@@ -25,6 +25,7 @@ public class LearningFragment extends Fragment {
         binding = FragmentLearningBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        //Tombol mengarah ke tiap materi
         final Button awan = binding.buttonAwan;
         final Button presipitasi = binding.buttonPresipitasi;
         final Button ekstrem = binding.buttonEkstrem;
@@ -39,6 +40,7 @@ public class LearningFragment extends Fragment {
             }
         });
 
+        //Class unruk mengarahkan ke layout
         presipitasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +68,7 @@ public class LearningFragment extends Fragment {
         return root;
     }
 
+    //Destroy View
     @Override
     public void onDestroyView() {
         super.onDestroyView();
