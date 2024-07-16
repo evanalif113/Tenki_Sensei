@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.database.DatabaseFragment">
+    tools:context=".ui.database.DatabaseFragment"
+    android:background="@color/lembut">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,104 +16,101 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- TextView for title -->
-            <TextView
-                android:id="@+id/titleText"
+            <!-- CardView wrapping the form elements -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Database Jurnal Cuaca"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent">
 
-            <!-- EditText for tanggal with autofill date -->
-            <EditText
-                android:id="@+id/idEdtTanggal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:clickable="true"
-                android:focusable="false"
-                android:hint="Tanggal"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/titleText" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            <!-- EditText to enter suhu -->
-            <EditText
-                android:id="@+id/idEdtSuhu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Suhu"
-                android:minHeight="48dp"
-                app:layout_constraintTop_toBottomOf="@id/idEdtTanggal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                    <!-- TextView for title -->
+                    <TextView
+                        android:id="@+id/titleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Database Jurnal Cuaca"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-            <!-- EditText to enter kelembapan -->
-            <EditText
-                android:id="@+id/idEdtKelembapan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Kelembapan"
-                android:minHeight="48dp"
-                app:layout_constraintTop_toBottomOf="@id/idEdtSuhu"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                    <!-- EditText for tanggal with autofill date -->
+                    <EditText
+                        android:id="@+id/idEdtTanggal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="Tanggal"
+                        android:minHeight="48dp" />
 
-            <!-- EditText to enter kondisi cuaca -->
-            <EditText
-                android:id="@+id/idEdtKeadaanCuaca"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Keadaan Cuaca"
-                android:minHeight="48dp"
-                app:layout_constraintTop_toBottomOf="@id/idEdtKelembapan"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                    <!-- EditText to enter suhu -->
+                    <EditText
+                        android:id="@+id/idEdtSuhu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Suhu"
+                        android:minHeight="48dp" />
 
-            <!-- Button for adding data -->
-            <Button
-                android:id="@+id/tambahData"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@color/biru"
-                android:padding="16dp"
-                android:text="TAMBAH DATA"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/idEdtKeadaanCuaca" />
+                    <!-- EditText to enter kelembapan -->
+                    <EditText
+                        android:id="@+id/idEdtKelembapan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Kelembapan"
+                        android:minHeight="48dp" />
 
-            <Button
-                android:id="@+id/lihatData"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@color/biru"
-                android:padding="16dp"
-                android:text="LIHAT DATA"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tambahData" />
+                    <!-- EditText to enter kondisi cuaca -->
+                    <EditText
+                        android:id="@+id/idEdtKeadaanCuaca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Keadaan Cuaca"
+                        android:minHeight="48dp" />
 
+                    <!-- Button for adding data -->
+                    <Button
+                        android:id="@+id/tambahData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/biru"
+                        android:padding="16dp"
+                        android:text="TAMBAH DATA"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/lihatData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/biru"
+                        android:padding="16dp"
+                        android:text="LIHAT DATA"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
