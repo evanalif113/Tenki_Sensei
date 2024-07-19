@@ -32,6 +32,7 @@ public class LearningFragment extends Fragment {
         final Button presipitasi = binding.buttonPresipitasi;
         final Button ekstrem = binding.buttonEkstrem;
         final Button angin = binding.buttonAngin;
+        final Button iklim = binding.buttonIklim;
         final WebView webView = binding.webView;
 
         // Setting up the onClickListeners for the buttons
@@ -63,6 +64,14 @@ public class LearningFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), LearnAngin.class);
+                startActivity(intent);
+            }
+        });
+
+        iklim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LearnIklim.class);
                 startActivity(intent);
             }
         });

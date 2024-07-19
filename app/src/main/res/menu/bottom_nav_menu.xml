@@ -5,14 +5,16 @@
         android:id="@+id/navigation_learning"
         android:icon="@drawable/overcast_day_rain"
         android:title="@string/Learning" />
-
     <item
         android:id="@+id/navigation_calculator"
         android:icon="@drawable/thermometer_raindrop"
         android:title="@string/Calculator" />
-
     <item
         android:id="@+id/navigation_database"
         android:icon="@drawable/barometer"
         android:title="@string/Database" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/raindrop_measure"
+        android:title="@string/Dashboard" />
 </menu>

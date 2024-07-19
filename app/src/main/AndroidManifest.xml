@@ -16,13 +16,16 @@
         android:theme="@style/Theme.TenkiSensei"
         tools:targetApi="31" >
         <activity
+            android:name=".ui.learning.LearnIklim"
+            android:exported="false" />
+        <activity
             android:name=".ui.learning.LearnAngin"
             android:exported="false"
-            android:label="Angin"/>
+            android:label="Angin" />
         <activity
             android:name=".ui.learning.LearnEkstrem"
             android:exported="false"
-            android:label="Cuaca Ekstrem"/>
+            android:label="Cuaca Ekstrem" />
         <activity
             android:name=".ui.learning.LearnPresipitasi"
             android:exported="false"
@@ -30,7 +33,7 @@
         <activity
             android:name=".ui.learning.LearnAwan"
             android:exported="false"
-            android:label="Awan"/>
+            android:label="Awan" />
         <activity
             android:name=".ui.database.UpdateCuaca"
             android:exported="true"
@@ -59,7 +62,6 @@
                 <category android:name="android.intent.category.ALTERNATIVE" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

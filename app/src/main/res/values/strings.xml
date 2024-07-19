@@ -3,6 +3,7 @@
     <string name="Learning" translatable="false">Learning</string>
     <string name="Calculator" translatable="false">Calculator</string>
     <string name="Database" translatable="false">Database</string>
+    <string name="Dashboard" translatable="false">Dashboard</string>
     <string name="title_activity_learn_presipitasi">LearnPresipitasi</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
@@ -94,4 +95,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
