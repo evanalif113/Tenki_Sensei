@@ -19,10 +19,10 @@ public class LearningFragment extends Fragment {
     private FragmentLearningBinding binding;
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        LearningViewModel learningViewModel =
-                new ViewModelProvider(this).get(LearningViewModel.class);
+    public View onCreateView(@NonNull
+                                 LayoutInflater inflater,
+                             ViewGroup container,
+                             Bundle savedInstanceState) {
 
         binding = FragmentLearningBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

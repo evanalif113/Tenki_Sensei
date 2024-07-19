@@ -33,7 +33,6 @@ public class DatabaseFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        DatabaseViewModel notificationsViewModel = new ViewModelProvider(this).get(DatabaseViewModel.class);
 
         binding = FragmentDatabaseBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

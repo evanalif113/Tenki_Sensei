@@ -23,7 +23,6 @@ public class CalculatorFragment extends Fragment {
                                  LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        CalculatorViewModel calculatorViewModel = new ViewModelProvider(this).get(CalculatorViewModel.class);
 
         binding = FragmentCalculatorBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
