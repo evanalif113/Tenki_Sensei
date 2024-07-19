@@ -201,4 +201,10 @@ public class DatabaseFragment extends Fragment {
         // Combine with other fields if needed
         return dateId;
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
