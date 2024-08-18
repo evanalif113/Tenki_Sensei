@@ -1,7 +1,3 @@
-Berikut adalah template untuk file `README.md` untuk aplikasi **Tenki Sensei (天気先生)**:
-
----
-
 # Tenki Sensei (天気先生)
 
 **Tenki Sensei** adalah aplikasi edukatif yang dirancang untuk membantu pengguna memahami dan mempelajari cuaca serta iklim. Aplikasi ini berfungsi sebagai "Guru Cuaca" pribadi Anda, memberikan pengetahuan yang komprehensif dan mudah diakses tentang fenomena cuaca.
