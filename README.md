@@ -25,16 +25,6 @@
 - **Grafik Cuaca**: Analisis data cuaca dalam bentuk grafik untuk pemahaman yang lebih dalam.
 - **Pengaturan**: Personalisasi pengalaman belajar Anda dengan menyesuaikan preferensi aplikasi.
 
-## 📝 Kontribusi
-
-Kami menyambut kontribusi dari semua orang. Jika Anda ingin berkontribusi, silakan ikuti langkah-langkah berikut:
-
-1. Fork repositori ini.
-2. Buat branch fitur baru (`git checkout -b feature/AmazingFeature`).
-3. Commit perubahan Anda (`git commit -m 'Add some AmazingFeature'`).
-4. Push ke branch (`git push origin feature/AmazingFeature`).
-5. Buka Pull Request.
-
 ## 📄 Lisensi
 
 Aplikasi ini dilisensikan di bawah [MIT License](LICENSE).
