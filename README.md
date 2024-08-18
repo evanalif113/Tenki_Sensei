@@ -11,16 +11,9 @@
 - **Peringatan Cuaca**: Menyediakan notifikasi dan peringatan cuaca berdasarkan lokasi pengguna.
 - **Sinkronisasi Data**: Memanfaatkan Firebase untuk menyinkronkan data cuaca dan pembelajaran antar perangkat.
 
-## 🚀 Teknologi yang Digunakan
-
-- **Front-End**: Menggunakan HTML5, CSS3, dan JavaScript untuk antarmuka pengguna yang responsif.
-- **Back-End**: Didukung oleh Firebase untuk autentikasi, penyimpanan data real-time, dan sinkronisasi antar perangkat.
-- **Visualisasi Data**: Menggunakan Highcharts.js untuk menampilkan data cuaca dalam bentuk grafik interaktif.
-- **Sensor Cuaca**: Mengintegrasikan sensor cuaca untuk mendapatkan data real-time yang akurat.
-
 ## 🎓 Cara Penggunaan
 
-- **Dashboard Utama**: Menampilkan data cuaca saat ini berdasarkan lokasi Anda.
+- **Dashboard Utama**: Menampilkan data cuaca saat ini berdasarkan perangkat IoT.
 - **Modul Pembelajaran**: Akses materi pembelajaran tentang cuaca dengan penjelasan terperinci.
 - **Grafik Cuaca**: Analisis data cuaca dalam bentuk grafik untuk pemahaman yang lebih dalam.
 - **Pengaturan**: Personalisasi pengalaman belajar Anda dengan menyesuaikan preferensi aplikasi.
