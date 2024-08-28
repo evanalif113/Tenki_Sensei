@@ -24,6 +24,6 @@ Aplikasi ini dilisensikan di bawah [MIT License](LICENSE).
 
 ## 📧 Kontak
 
-Untuk pertanyaan atau informasi lebih lanjut, hubungi kami di [email@example.com](mailto:email@example.com).
+Untuk pertanyaan atau informasi lebih lanjut, hubungi kami di [email@example.com](mailto:evanalifwidhyatma@gmail.com).
 
 ---
