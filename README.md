@@ -1,6 +1,7 @@
 # Tenki Sensei (天気先生)
 
 **Tenki Sensei** adalah aplikasi edukatif yang dirancang untuk membantu pengguna memahami dan mempelajari cuaca serta iklim. Aplikasi ini berfungsi sebagai "Guru Cuaca" pribadi Anda, memberikan pengetahuan yang komprehensif dan mudah diakses tentang fenomena cuaca.
+
 [![DOI](https://zenodo.org/badge/822674079.svg)](https://doi.org/10.5281/zenodo.14028920)
 ## 📚 Fitur Utama
 
