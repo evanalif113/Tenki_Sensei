@@ -2,6 +2,7 @@
 
 **Tenki Sensei** adalah aplikasi edukatif yang dirancang untuk membantu pengguna memahami dan mempelajari cuaca serta iklim. Aplikasi ini berfungsi sebagai "Guru Cuaca" pribadi Anda, memberikan pengetahuan yang komprehensif dan mudah diakses tentang fenomena cuaca.
 
+[![DOI](https://zenodo.org/badge/822674079.svg)](https://doi.org/10.5281/zenodo.14028920)
 ## 📚 Fitur Utama
 
 - **Informasi Cuaca Real-time**: Menyajikan data cuaca terkini, termasuk suhu, kelembaban, tekanan udara, dan lainnya secara real-time.
@@ -24,6 +25,6 @@ Aplikasi ini dilisensikan di bawah [MIT License](LICENSE).
 
 ## 📧 Kontak
 
-Untuk pertanyaan atau informasi lebih lanjut, hubungi kami di [email@example.com](mailto:evanalifwidhyatma@gmail.com).
+Untuk pertanyaan atau informasi lebih lanjut, hubungi kami di [evanalifwidhyatma@gmail.com](mailto:evanalifwidhyatma@gmail.com).
 
 ---
