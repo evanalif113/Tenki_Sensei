@@ -23,9 +23,4 @@
         android:label="@string/Database"
         tools:layout="@layout/fragment_database" />
 
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.tenkisen.ui.dashboard.DashboardFragment"
-        android:label="@string/Database"
-        tools:layout="@layout/fragment_dashboard" />
 </navigation>

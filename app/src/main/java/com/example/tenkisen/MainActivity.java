@@ -32,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 // Beranda
                 R.id.navigation_learning,
                 R.id.navigation_calculator,
-                R.id.navigation_database,
-                R.id.navigation_dashboard)
+                R.id.navigation_database)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

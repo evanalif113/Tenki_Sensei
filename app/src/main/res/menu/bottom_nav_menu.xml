@@ -13,8 +13,4 @@
         android:id="@+id/navigation_database"
         android:icon="@drawable/barometer"
         android:title="@string/Database" />
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/raindrop_measure"
-        android:title="@string/Dashboard" />
 </menu>

@@ -33,7 +33,6 @@ public class LearningFragment extends Fragment {
         final Button ekstrem = binding.buttonEkstrem;
         final Button angin = binding.buttonAngin;
         final Button iklim = binding.buttonIklim;
-        final WebView webView = binding.webView;
 
         // Setting up the onClickListeners for the buttons
         awan.setOnClickListener(new View.OnClickListener() {
@@ -75,19 +74,6 @@ public class LearningFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
-        // Initialize the WebView
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://thingspeak.com/" +
-                "channels/2326256/" +
-                "charts/1?" +
-                "bgcolor=%23ffffff" +
-                "&color=%2300b3b3" +
-                "&dynamic=true" +
-                "&results=60" +
-                "&title=Suhu" +
-                "&type=spline"); // or use webView.loadData() to load HTML content directly
-
         return root;
     }
 
